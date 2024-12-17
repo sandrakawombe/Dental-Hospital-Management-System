@@ -1,8 +1,8 @@
 package snakayima.miu.edu.dhms.Domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Appointment {
@@ -13,5 +13,16 @@ public class Appointment {
     private String description;
     private String date;
     private String time;
+
+    @ManyToOne
+    private Patient patient;
+
+    @ManyToOne
+    private Dentist dentist;
+
+    @OneToMany
+    private List<Treatment> treatmentList;
+
+
 
 }
