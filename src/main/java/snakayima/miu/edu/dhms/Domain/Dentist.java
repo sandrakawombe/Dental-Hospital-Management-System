@@ -11,10 +11,10 @@ public class Dentist extends Person {
     private String workerId;
     private int yearsOfExperience;
 
-    @OneToMany
+    @OneToMany(mappedBy = "dentist")
     private List<Appointment> appointment;
 
-    @OneToMany
+    @OneToMany(mappedBy = "dentist")
     private List<Schedule> schedule;
 
 

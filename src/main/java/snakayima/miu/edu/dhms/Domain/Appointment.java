@@ -15,12 +15,14 @@ public class Appointment {
     private String time;
 
     @ManyToOne
+    @JoinColumn(name = "Patient_id")
     private Patient patient;
 
     @ManyToOne
+    @JoinColumn(name = "Dentist_id")
     private Dentist dentist;
 
-    @OneToMany
+    @OneToMany(mappedBy = "appointment")
     private List<Treatment> treatmentList;
 
 

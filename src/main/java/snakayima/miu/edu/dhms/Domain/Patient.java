@@ -10,7 +10,7 @@ public class Patient extends Person {
 
     private String patientId;
 
-    @OneToMany
+    @OneToMany(mappedBy = "patient")
     private List<Appointment> appointment;
 
 
