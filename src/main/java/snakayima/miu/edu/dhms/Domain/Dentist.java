@@ -18,7 +18,53 @@ public class Dentist extends Person {
     private List<Schedule> schedule;
 
 
-    public Dentist() {}
+    protected Dentist() {}
 
+    public Dentist(Person person, String workerId, int yearsOfExperience) {
+        this.workerId = workerId;
+        this.yearsOfExperience = yearsOfExperience;
 
+    }
+
+    public String getWorkerId() {
+        return workerId;
+    }
+
+    public void setWorkerId(String workerId) {
+        this.workerId = workerId;
+    }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public List<Appointment> getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(List<Appointment> appointment) {
+        this.appointment = appointment;
+    }
+
+    public List<Schedule> getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(List<Schedule> schedule) {
+        this.schedule = schedule;
+    }
+
+    @Override
+    public String toString() {
+        return "Dentist{" +
+                "workerId='" + workerId + '\'' +
+                ", yearsOfExperience=" + yearsOfExperience +
+                ", appointment=" + appointment +
+                ", schedule=" + schedule +
+                '}';
+    }
 }
