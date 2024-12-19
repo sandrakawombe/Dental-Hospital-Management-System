@@ -103,4 +103,18 @@ public class Appointment {
     public void setTreatmentList(List<Treatment> treatmentList) {
         this.treatmentList = treatmentList;
     }
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", patient=" + patient +
+                ", dentist=" + dentist +
+                ", treatmentList=" + treatmentList +
+                '}';
+    }
 }

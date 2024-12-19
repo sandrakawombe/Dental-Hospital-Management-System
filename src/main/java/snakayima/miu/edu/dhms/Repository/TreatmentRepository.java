@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 import snakayima.miu.edu.dhms.Domain.Treatment;
 @Repository
 public interface TreatmentRepository extends JpaRepository<Treatment, Long> {
+
 }

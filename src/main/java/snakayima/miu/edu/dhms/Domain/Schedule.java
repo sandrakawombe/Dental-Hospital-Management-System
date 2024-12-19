@@ -93,4 +93,18 @@ public class Schedule {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Schedule{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", status=" + status +
+                ", created=" + created +
+                ", dentist=" + dentist +
+                '}';
+    }
 }
